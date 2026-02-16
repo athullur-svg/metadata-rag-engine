@@ -1,4 +1,5 @@
 ![CI](../../actions/workflows/ci.yml/badge.svg)
+
 # Metadata RAG Engine
 
 A production-minded metadata AI assistant built in Python to transform DataHub-style schema metadata into a searchable semantic data dictionary using embeddings, vector search, and a local RAG (Retrieval-Augmented Generation) pipeline.
