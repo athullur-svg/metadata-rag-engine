@@ -1,4 +1,5 @@
-![CI](https://github.com/<athullur-svg>/metadata-rag-engine/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/athullur-svg/metadata-rag-engine/actions/workflows/ci.yml/badge.svg)
+
 
 
 # Metadata RAG Engine
