@@ -1,0 +1,30 @@
+[
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:postgres,finance.public.customers,PROD)",
+    "aspectName": "schemaMetadata",
+    "aspect": {
+      "json": {
+        "fields": [
+          {"fieldPath":"customer_id","nativeDataType":"int"},
+          {"fieldPath":"email","nativeDataType":"varchar"},
+          {"fieldPath":"created_at","nativeDataType":"timestamp"}
+        ]
+      }
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:postgres,finance.public.transactions,PROD)",
+    "aspectName": "schemaMetadata",
+    "aspect": {
+      "json": {
+        "fields": [
+          {"fieldPath":"transaction_id","nativeDataType":"bigint"},
+          {"fieldPath":"customer_id","nativeDataType":"int"},
+          {"fieldPath":"amount","nativeDataType":"decimal"}
+        ]
+      }
+    }
+  }
+]
