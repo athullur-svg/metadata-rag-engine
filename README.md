@@ -29,29 +29,31 @@ Everything is built with reproducibility and local-first development in mind.
 
 ---
 
-## Design Philosophy
+## Architecture Overview
 
-This project follows the same engineering principles I apply in production systems:
-
-- **Deterministic ingestion** — repeated runs produce consistent results  
-- **Stable identifiers** — chunk IDs derived via hashing  
-- **Separation of concerns** — ingestion, embedding, retrieval, API  
-- **Local-first AI** — no external APIs required  
-- **Operational clarity** — explicit index validation and startup checks  
-
-The focus is reliability over novelty.
+```mermaid
+flowchart LR
+    A[DataHub Metadata JSON] --> B[Normalization & Chunking]
+    B --> C[Deterministic Hash IDs]
+    C --> D[Embedding Generation<br/>SentenceTransformers]
+    D --> E[Vector Index<br/>Sklearn NearestNeighbors]
+    E --> F[RAG Retrieval Layer]
+    F --> G[Answer Synthesis]
+    G --> H[CLI Interface]
+    G --> I[FastAPI REST API]
+```
 
 ---
 
-## Architecture Overview
+## End-to-End Flow
 
 Metadata JSON  
 → Normalization & Chunking  
-→ Embedding Generation (SentenceTransformers)  
-→ Vector Index (Sklearn NearestNeighbors)  
-→ RAG Retrieval  
-→ Structured Answer Synthesis  
-→ FastAPI / CLI Interface  
+→ Embedding Generation  
+→ Vector Index Creation  
+→ Semantic Retrieval  
+→ Ranked Answer Generation  
+→ API / CLI Output  
 
 ---
 
