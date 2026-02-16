@@ -1,4 +1,5 @@
-![CI](../../actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/<your-username>/metadata-rag-engine/actions/workflows/ci.yml/badge.svg)
+
 
 # Metadata RAG Engine
 
